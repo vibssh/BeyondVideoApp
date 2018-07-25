@@ -1,0 +1,14 @@
+.app-background {
+    height: 500px;
+    //overflow: hidden;
+    position: relative;
+}
+
+.app-background__image {
+    bottom: 0;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}

@@ -1,0 +1,51 @@
+/**
+ * @author Vaibhav Shringarpure
+ * @email vibs.sh@gmail.com
+ * @create date 2018-07-25
+ * @modify date 2018-07-25
+ * @desc [Video]
+*/
+
+/* Import Helper */
+
+@import '../../../helper.scss';
+/* Maintaining the aspect ratio of youtube embed */
+
+.video-wrapper {
+    height: 0;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    position: relative;
+}
+
+.video-wrapper {
+    iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.video__content-col {
+    margin-top: 27px;
+    @media (min-width: map-get($beyond-breakpoints, md)) {
+        margin-top: 0;
+    }
+}
+
+.video__published {
+    padding: 12px 0;
+}
+
+.video__copy {
+    padding-bottom: 25px;
+}
+
+.video__back-link {
+    color: $secondary-color;
+    display: block;
+    @include remsize(font-size, 13px);
+}

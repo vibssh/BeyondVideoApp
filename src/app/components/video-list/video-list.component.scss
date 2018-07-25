@@ -21,6 +21,9 @@
     width: 100%;
     @media (min-width: map-get($beyond-breakpoints, sm)) {
         width: 50%;
+        &:nth-child(3n+1) {
+            padding-left: 0;
+        }
     }
     @media (min-width: map-get($beyond-breakpoints, lg)) {
         width: 33.33%;

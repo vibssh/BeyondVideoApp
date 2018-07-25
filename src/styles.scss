@@ -156,6 +156,18 @@ html {
 @import 'helper.scss';
 
 /* Typography Helper classes */
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+    }
+}
+
 .title-copy {
     color: $secondary-font-color;
     line-height: 15px;    
@@ -169,8 +181,8 @@ html {
 }
 
 .heading-copy {
-    color: $secondary-font-color;
-    font-family: $secondary-font;
+    color: $secondary-color;
+    font-family: $primary-font;
     line-height: 22px;
     @include remsize(font-size, 16px);
 }

@@ -1,0 +1,79 @@
+/**
+ * @author Vaibhav Shringarpure
+ * @email vibs.sh@gmail.com
+ * @create date 2018-07-25
+ * @modify date 2018-07-25
+ * @desc [Video List Component]
+*/
+
+/* Import Helper scss */
+
+@import '../../../helper.scss';
+.video-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.video-list__item {
+    display: flex;
+    margin-bottom: 1.375em;
+    padding: 0.5em;
+    width: 100%;
+    @media (min-width: map-get($beyond-breakpoints, sm)) {
+        width: 50%;
+    }
+    @media (min-width: map-get($beyond-breakpoints, lg)) {
+        width: 33.33%;
+    }
+}
+
+.video-list__content {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+    @media (min-width: map-get($beyond-breakpoints, sm)) {
+        padding: 0 0.938em;
+        &:nth-child(3n+1) {
+            padding-left: 0;
+        }
+    }
+}
+
+.video-list__content__image-wrapper {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 160px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.video-list__content__title {
+    background: rgba(0, 0, 0, 0.75);
+    bottom: 0;
+    display: block;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+}
+
+.video-list__content__title-text {
+    padding-right: 55px;
+}
+
+.video-list__content__play-button {
+    bottom: 6px;
+    height: 28px;
+    position: absolute;
+    right: 8px;
+    width: 28px;
+}
+
+.video-list__content__copy__text {
+    padding-top: 8px;
+}
+
+.video-list__content__copy__text p {
+    flex: 1 0 auto;
+}

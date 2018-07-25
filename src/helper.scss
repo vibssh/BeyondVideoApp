@@ -1,10 +1,10 @@
 /* Breakpoint Map */
 $beyond-breakpoints: (
   xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
+  sm: 36em, //576px
+  md: 48em, //768px
+  lg: 62em, //992px
+  xl: 75em, //1200px
 );
 
 /* Primary Colors */

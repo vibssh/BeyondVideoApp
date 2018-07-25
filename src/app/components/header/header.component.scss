@@ -11,6 +11,7 @@
 @import '../../../helper.scss';
 header {
     position: relative;
+    margin-bottom: 43px;
 }
 
 .header__striped {
@@ -30,7 +31,6 @@ header {
 
 .header__logo {
     height: 43px;
-    left: 20px;
     position: absolute;
     top: 15px;
     width: 100%;

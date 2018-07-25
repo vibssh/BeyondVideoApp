@@ -9,13 +9,8 @@
       "projectType": "application",
       "prefix": "bynd",
       "schematics": {
-        "@schematics/angular:class": {
-          "spec": false
-        },
         "@schematics/angular:component": {
-          "spec": false
-        },
-        "@schematics/angular:directive": {
+          "styleext": "scss",
           "spec": false
         },
         "@schematics/angular:guard": {
@@ -145,10 +140,6 @@
       }
     }
   },
-  "defaultProject": "beyondvideoapp",
-  "schematics": {
-    "@schematics/angular:component": {
-      "styleext": "scss"
-    }
-  }
+  "defaultProject": "beyondvideoapp"
+  
 }

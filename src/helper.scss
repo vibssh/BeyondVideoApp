@@ -1,0 +1,33 @@
+/* Breakpoint Map */
+$beyond-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+/* Primary Colors */
+$primary-color: #D8D8D8;
+$secondary-color: #50E3C2;
+$white-color: #FFFFFF;
+$grey-color: #494848;
+$black-color: #000000;
+$primary-font-color: #878787;
+$secondary-font-color: #CACACA;
+
+/* Font Stack */
+$primary-font: 'Roboto', sans-serif;
+$secondary-font: 'Alfa Slab One', cursive;
+
+/* Mixin for sizing in Rems */
+$base-font-size: 16px;
+
+@mixin remsize($prop, $px, $base: $base-font-size) {
+    #{$prop}: $px;
+    //#{$prop} : ($px / $base) * 1em;
+    #{$prop}: ($px / $base) * 1rem;
+    //
+    //Usage :
+    //	@include remsize(font-size, 20px);
+}

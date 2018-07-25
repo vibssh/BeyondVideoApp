@@ -1,0 +1,49 @@
+/**
+ * @author Vaibhav Shringarpure
+ * @email vibs.sh@gmail.com
+ * @create date 2018-07-25
+ * @modify date 2018-07-25
+ * @desc [Header Component]
+*/
+
+/* Import Helper scss */
+
+@import '../../../helper.scss';
+header {
+    position: relative;
+}
+
+.header__striped {
+    height: 40px;
+    position: relative;
+}
+
+.header__striped__svg {
+    bottom: 0;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.header__logo {
+    height: 43px;
+    left: 20px;
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    z-index: 3;
+
+    @media (min-width: map-get($beyond-breakpoints, lg )){
+        top: 10px;
+    }
+}
+
+.header__logo__svg {
+    height: 43px;
+    @media (min-width: map-get($beyond-breakpoints, lg )){
+        height: 55px;
+    }
+}

@@ -7,10 +7,12 @@
 -->
 <div class="container">
     <ul class="video-list">
-        <li class="video-list__item">
+        <li class="video-list__item" *ngFor="let item of videoList">
             <div class="video-list__content">
-                <div class="video-list__content__image-wrapper" style="background-image:url(http://baconmockup.com/250/200);">
-                    <a href="/video">
+                <div class="video-list__content__image-wrapper">
+                    <img src="{{item.snippet.thumbnails !== undefined ? item.snippet.thumbnails.medium.url : '/assets/images/video-bg.png'}}"
+                        alt="" class="video__list__thumbnail">
+                    <a routerLink="/video">
                         <div class="video-list__content__title">
                             <h2 class="video-list__content__title-text heading-copy">Title of Video</h2>
                             <div class="video-list__content__play-button">

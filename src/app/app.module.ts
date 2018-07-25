@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { VideoListComponent } from './components/video-list/video-list.component';
 import { VideoComponent } from './components/video/video.component';
 
+import { HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { VideoComponent } from './components/video/video.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

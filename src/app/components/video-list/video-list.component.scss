@@ -50,6 +50,15 @@
     height: 160px;
     margin-bottom: 8px;
     position: relative;
+    overflow: hidden;
+}
+
+.video__list__thumbnail {
+    display: block;
+    width: 100%;
+    min-width: 320px;
+    height: 180px;
+    object-fit: cover;
 }
 
 .video-list__content__title {

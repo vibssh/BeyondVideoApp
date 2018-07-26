@@ -49,8 +49,8 @@
     background-size: cover;
     height: 160px;
     margin-bottom: 8px;
-    position: relative;
     overflow: hidden;
+    position: relative;
 }
 
 .video-list__content__copy-wrapper {
@@ -59,10 +59,10 @@
 
 .video__list__thumbnail {
     display: block;
-    width: 100%;
-    min-width: 320px;
     height: 180px;
+    min-width: 320px;
     object-fit: cover;
+    width: 100%;
 }
 
 .video-list__content__title {
@@ -97,34 +97,33 @@
 
 .video-list__pagination {
     display: block;
-    width: 100%;
     margin: 20px auto;
     text-align: center;
+    width: 100%;
 }
 
 .button {
     -webkit-appearance: none;
-    box-shadow: none;
     border: none;
     border-radius: 6px;
+    box-shadow: none;
+    color: $black-color;
     display: inline-block;
-    width: auto;
+    font-style: normal;
+    margin-right: 10px;
     min-width: 50px;
     padding: 10px 12px;
-    font-style: normal;
-    color: $black-color;
-    margin-right: 10px;
-
-    &:hover, &:active, &:focus {
-        text-decoration: none;
+    width: auto;
+    &:hover,
+    &:active,
+    &:focus {
         color: $black-color;
         outline: none;
+        text-decoration: none;
     }
-
     &.button--primary {
         background: $secondary-color;
     }
- 
     &.button--secondary {
         background: $secondary-font-color;
     }

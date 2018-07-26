@@ -1,3 +1,10 @@
+/**
+ * @author Vaibhav Shringarpure
+ * @email vibs.sh@gmail.com
+ * @create date 2018-07-26 03:12:59
+ * @modify date 2018-07-26 03:12:59
+ * @desc [Service to consume Youtube API]
+*/
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 

@@ -1,3 +1,10 @@
+/**
+ * @author Vaibhav Shringarpure
+ * @email vibs.sh@gmail.com
+ * @create date 2018-07-26 03.11.10
+ * @modify date 2018-07-26 03:11:10
+ * @desc [Custom Pipe for Sanitizing URL ]
+*/
 import { Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 @Pipe({ name: 'safe' })

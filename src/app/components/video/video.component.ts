@@ -38,7 +38,7 @@ export class VideoComponent implements OnInit {
                                 this.pubDate = new Date(this.video[0].publishedAt);
                                 this.videoText = this.video[0].description;
                             }
-                        }); 
+                        }, error=>{ console.log('Something went wrong...')}); 
                         return this.video;
     }
 

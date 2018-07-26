@@ -8,8 +8,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { FetchvideosService } from '../../service/fetchvideos.service';
-import { HttpParams } from '@angular/common/http';
-
+import { HttpParams } from '@angular/common/http'; 
 @Component({
     selector: 'bynd-video-list',
     templateUrl: './video-list.component.html',
@@ -42,6 +41,6 @@ export class VideoListComponent implements OnInit {
                   this.videoList = d[i]["items"];
               }
               console.log(this.videoList);
-          });
+          }, error=>{ console.log('something went wrong...');})
     }
 }

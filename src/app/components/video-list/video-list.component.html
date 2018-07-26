@@ -12,9 +12,9 @@
                 <div class="video-list__content__image-wrapper">
                     <img src="{{item.snippet.thumbnails !== undefined ? item.snippet.thumbnails.medium.url : '/assets/images/video-bg.png'}}"
                         alt="" class="video__list__thumbnail">
-                    <a routerLink="/video">
+                    <a routerLink ='/video/{{item.id}}'>
                         <div class="video-list__content__title">
-                            <h2 class="video-list__content__title-text heading-copy">Title of Video</h2>
+                            <h2 class="video-list__content__title-text heading-copy">{{item.snippet.title}}</h2>
                             <div class="video-list__content__play-button">
                                 <svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <defs></defs>
@@ -38,14 +38,13 @@
                 <div class="video-list__content__copy-wrapper">
                     <div class="video-list__content__copy__published">
                         <h3 class="title-copy">Published on
-                            <span>Oct 19, 2017</span>
+                            <span>{{item.snippet.publishedAt | date}}</span>
                         </h3>
                     </div>
 
                     <div class="video-list__content__copy__text">
                         <p class="paragraph-copy">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie nec neque et posuere. Mauris convallis est non dui
-                            condimentum efficitur. In urna ipsum, ultrices quis turpis sit amet, lobortis dictum ligula
+                            {{item.snippet.description}}
                         </p>
                     </div>
                 </div>

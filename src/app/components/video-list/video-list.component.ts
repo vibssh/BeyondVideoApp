@@ -41,6 +41,7 @@ export class VideoListComponent implements OnInit {
               for(let i=0; i<d.length; i++){
                   this.videoList = d[i]["items"];
               }
+              console.log(this.videoList);
           });
     }
 }

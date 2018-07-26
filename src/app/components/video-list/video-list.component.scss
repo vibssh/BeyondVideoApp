@@ -53,6 +53,10 @@
     overflow: hidden;
 }
 
+.video-list__content__copy-wrapper {
+    margin-top: 0.5em;
+}
+
 .video__list__thumbnail {
     display: block;
     width: 100%;
@@ -72,6 +76,7 @@
 
 .video-list__content__title-text {
     padding-right: 55px;
+    word-wrap: break-word;
 }
 
 .video-list__content__play-button {

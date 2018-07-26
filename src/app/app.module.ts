@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { VideoListComponent } from './components/video-list/video-list.component';
 import { VideoComponent } from './components/video/video.component';
-
+import { SafePipe } from "./SafePipe";
+import { HttpClientModule} from '@angular/common/http';
+ 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent, 
     HeaderComponent,
     VideoListComponent,
-    VideoComponent
+    VideoComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

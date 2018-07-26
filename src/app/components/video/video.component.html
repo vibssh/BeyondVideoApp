@@ -10,22 +10,20 @@
     <div class="col-one-sixth video-col">
         <div class="video-wrapper">
             <!-- Paste YouTube link here -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Y69gu2xv25s" frameborder="0" allow="autoplay; encrypted-media"
-                allowfullscreen></iframe>
+            <iframe width="560" height="315" [src]="iFrameUrl | safe" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
     </div>
 
     <div class="col-one-third video__content-col">
-        <h2 class="video__title heading-copy">Title of Video</h2>
+        <h2 class="video__title heading-copy">{{title}}</h2>
         <h3 class="video__published title-copy">Published on
-            <span>Oct 19, 2017</span>
+            <span>{{pubDate | date}}</span>
         </h3>
         <p class="video__copy paragraph-copy">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie nec neque et posuere. Mauris convallis est non dui
-            condimentum efficitur. In urna ipsum, ultrices quis turpis sit amet, lobortis dictum ligula
+            {{videoText}}
         </p>
 
-        <a href="/video-list" class="video__back-link">
+        <a routerLink="/video-list" class="video__back-link">
             <div class="back-icon">
                 <svg width="12px" height="15px" viewBox="0 0 12 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <defs></defs>

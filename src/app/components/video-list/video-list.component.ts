@@ -73,10 +73,26 @@ export class VideoListComponent implements OnInit {
       getNextItem() {
         let nextPageToken = this.paginationList[0]["nextPageToken"];
         this.getAllList(nextPageToken);
+        let scrollToTop = window.setInterval(() => {
+            let pos = window.pageYOffset;
+            if (pos > 0) {
+              window.scrollTo(0, pos - 200); // how far to scroll on each step
+            } else {
+              window.clearInterval(scrollToTop);
+            }
+          }, 16);
       }
     
       getPreviousItem($clicked){
         let prevPageToken = this.paginationList[0]["prevPageToken"]; 
         this.getAllList(prevPageToken);
+        let scrollToTop = window.setInterval(() => {
+            let pos = window.pageYOffset;
+            if (pos > 0) {
+              window.scrollTo(0, pos - 200); // how far to scroll on each step
+            } else {
+              window.clearInterval(scrollToTop);
+            }
+          }, 10);
       }
 }

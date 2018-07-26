@@ -35,15 +35,18 @@ header {
     top: 15px;
     width: 100%;
     z-index: 3;
-
-    @media (min-width: map-get($beyond-breakpoints, lg )){
+    @media (min-width: map-get($beyond-breakpoints, lg)) {
         top: 10px;
+    }
+    @media all and (-ms-high-contrast: none),
+    (-ms-high-contrast: active) {
+        width: 55%;
     }
 }
 
 .header__logo__svg {
     height: 43px;
-    @media (min-width: map-get($beyond-breakpoints, lg )){
+    @media (min-width: map-get($beyond-breakpoints, lg)) {
         height: 55px;
     }
 }

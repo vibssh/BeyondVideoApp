@@ -51,4 +51,9 @@
             </div>
         </li>
     </ul>
+
+    <div class="video-list__pagination">
+        <button (click)="getPreviousItem();" *ngIf="showPreviousButton">Previous</button>
+        <button (click)="getNextItem();" *ngIf="showNextButton">Next</button>
+    </div>
 </div>

@@ -16,7 +16,12 @@ import { HttpParams } from '@angular/common/http';
 })
 export class VideoListComponent implements OnInit {
     
+    showPreviousButton: boolean = false;
+    showNextButton: boolean = false;
+
     videoList : any[]= [];
+
+    paginationList: any[] = [];
 
     objProps;
 
@@ -36,11 +41,42 @@ export class VideoListComponent implements OnInit {
         this.videoService
           .getList(params)
           .subscribe((data)=>{
-              let d = [data];
+            let d = [data];
+            this.paginationList = [data];
               for(let i=0; i<d.length; i++){
                   this.videoList = d[i]["items"];
               }
+              console.log(this.paginationList[0]["nextPageToken"]);
               console.log(this.videoList);
+              this.togglePrevPaginationButton();
+            this.toggleNextPaginationButton();
           }, error=>{ console.log('something went wrong...');})
+          
     }
+
+    toggleNextPaginationButton() {
+        if(this.paginationList[0]["nextPageToken"] !== undefined){
+            this.showNextButton = true;
+        } else {
+            this.showNextButton = false;
+        }
+      }
+    
+      togglePrevPaginationButton(){
+        if(this.paginationList[0]["prevPageToken"] !== undefined){
+            this.showPreviousButton = true;
+        } else {
+            this.showPreviousButton = false;
+        }
+      }
+    
+      getNextItem() {
+        let nextPageToken = this.paginationList[0]["nextPageToken"];
+        this.getAllList(nextPageToken);
+      }
+    
+      getPreviousItem($clicked){
+        let prevPageToken = this.paginationList[0]["prevPageToken"]; 
+        this.getAllList(prevPageToken);
+      }
 }

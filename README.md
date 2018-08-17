@@ -1,5 +1,5 @@
 # Beyondvideoapp
-This Project is authored by Vaibhav Shringarpure as part of Beyond's Front End Task. It uses Angular version 6.0.3
+This Project is authored by Vaibhav Shringarpure.It uses Angular version 6.0.3
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -28,9 +28,6 @@ Please DO NOT edit files directly in the 'Dist' Folder. All application code is 
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-* Thank you to Joyce and Team at Beyound for giving this opportunity
 
 ## Built With Love and Coffee
 Date : 25.July.2018  
